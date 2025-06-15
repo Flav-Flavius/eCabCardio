@@ -1,0 +1,37 @@
+{% extends 'base.html' %} {% block title %}Dashboard{% endblock %} {% block content %}
+<div class="container mt-4">
+  <h2>Welcome, {{ user.username }}!</h2>
+  <p>Your role: <strong>{{ role }}</strong></p>
+
+  <div class="row mt-4">
+    {% if role == 'medic' %}
+    <div class="col-md-4 mb-3">
+      <a href="/patients" class="btn btn-primary w-100">Patient List</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="/consults" class="btn btn-secondary w-100">Consultations</a>
+    </div>
+    <div class="col-md-4 mb-3">
+      <a href="/preferences" class="btn btn-info w-100">User Preferences</a>
+    </div>
+    {% elif role == 'admin' %}
+    <div class="col-md-3 mb-3">
+      <a href="/admin/clinic" class="btn btn-primary w-100">Clinic Settings</a>
+    </div>
+    <div class="col-md-3 mb-3">
+      <a href="/admin/exams" class="btn btn-secondary w-100">Examinations</a>
+    </div>
+    <div class="col-md-3 mb-3">
+      <a href="/admin/lab-tests" class="btn btn-warning w-100">Lab Tests</a>
+    </div>
+    <div class="col-md-3 mb-3">
+      <a href="/admin/users" class="btn btn-info w-100">User Management</a>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="mt-4">
+    <a href="/logout" class="btn btn-outline-danger">Logout</a>
+  </div>
+</div>
+{% endblock %}
