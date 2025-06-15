@@ -11,6 +11,8 @@ def create_app():
     app.config.from_pyfile('config.py')
 
     mysql.init_app(app)
+    app.extensions = getattr(app, 'extensions', {})
+    app.extensions['mysql'] = mysql
     login_manager.init_app(app)
     login_manager.login_view = 'login'
 
@@ -25,8 +27,11 @@ def create_app():
 
     from routes.auth import auth_bp
     from routes.dashboard import dashboard_bp
+    from routes.patients import patients_bp
+
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(dashboard_bp)
+    app.register_blueprint(patients_bp)
 
     return app
