@@ -1,0 +1,48 @@
+{% extends 'base.html' %} {% block title %}Patient List{% endblock %} {% block content %}
+<h2 class="text-center mb-4">Patient List</h2>
+
+<a href="/patients/add" class="btn btn-success mb-3">Add Patient</a>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Patient No.</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Birth Date</th>
+      <th>County</th>
+      <th>City</th>
+      <th>Address</th>
+      <th>Occupation</th>
+      <th>Workplace</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>CNP</th>
+      <th>Marital Status</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for patient in patients %}
+    <tr>
+      <td>{{ patient[0] }}</td>
+      <td>{{ patient[1] }}</td>
+      <td>{{ patient[2] }}</td>
+      <td>{{ patient[3] }}</td>
+      <td>{{ patient[4] }}</td>
+      <td>{{ patient[5] }}</td>
+      <td>{{ patient[6] }}</td>
+      <td>{{ patient[7] }}</td>
+      <td>{{ patient[8] }}</td>
+      <td>{{ patient[9] }}</td>
+      <td>{{ patient[10] }}</td>
+      <td>{{ patient[11] }}</td>
+      <td>{{ patient[12] }}</td>
+      <td>{{ patient[13] }}</td>
+      <td>{{ patient[14] }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
