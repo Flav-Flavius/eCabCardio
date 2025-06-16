@@ -105,6 +105,8 @@ CREATE TABLE `files` (
 INSERT INTO `files` (`id`, `file_name`, `file_path`, `uploade_at`, `patient_id`) VALUES
 (2, 'ecg_scan.pdf', '/uploads/ecg_scan.pdf', '2025-06-08 16:33:05', 1);
 
+
+
 -- --------------------------------------------------------
 
 --
@@ -179,6 +181,17 @@ CREATE TABLE `patients` (
 
 INSERT INTO `patients` (`id`, `patient_number`, `first_name`, `last_name`, `birth_date`, `county`, `city`, `address`, `occupation`, `workplace`, `phone`, `email`, `cnp`, `marital_status`, `created_at`) VALUES
 (1, 'P001', 'Ion', 'Popescu', '1970-01-01', NULL, NULL, NULL, NULL, NULL, NULL, 'ion.popescu@email.com', '1970101123456', NULL, '2025-06-08 16:31:10');
+INSERT INTO `patients` (`id`, `patient_number`, `first_name`, `last_name`, `birth_date`, `county`, `city`, `address`, `occupation`, `workplace`, `phone`, `email`, `cnp`, `marital_status`, `created_at`) VALUES
+(2, 'P002', 'Maria', 'Ionescu', '1980-02-14', 'Cluj', 'Cluj-Napoca', 'Str. Primăverii 10', 'Medic', 'Spital Municipal', '0741000001', 'maria.ionescu@email.com', '2800214123456', 'Necăsătorit', NOW()),
+(3, 'P003', 'Andrei', 'Pop', '1990-05-22', 'Bihor', 'Oradea', 'Str. Libertății 5', 'Avocat', 'Cabinet Pop', '0741000002', 'andrei.pop@email.com', '1900522123456', 'Căsătorit', NOW()),
+(4, 'P004', 'Ioana', 'Georgescu', '1975-11-10', 'Brașov', 'Brașov', 'Bd. Saturn 3', 'Profesor', 'Liceul 1', '0741000003', 'ioana.geo@email.com', '2751110123456', 'Necăsătorit', NOW()),
+(5, 'P005', 'Cristian', 'Stan', '1988-06-30', 'Iași', 'Iași', 'Str. Copou 7', 'IT-ist', 'SoftVision', '0741000004', 'cristian.stan@email.com', '1880630123456', 'Căsătorit', NOW()),
+(6, 'P006', 'Laura', 'Munteanu', '1995-12-05', 'Timiș', 'Timișoara', 'Str. Take Ionescu 2', 'Farmacist', 'HelpNet', '0741000005', 'laura.m@email.com', '2951205123456', 'Necăsătorit', NOW()),
+(7, 'P007', 'Vlad', 'Nistor', '1983-03-17', 'Constanța', 'Constanța', 'Bd. Tomis 100', 'Inginer', 'Petrom', '0741000006', 'vlad.nistor@email.com', '1830317123456', 'Căsătorit', NOW()),
+(8, 'P008', 'Elena', 'Radu', '1992-09-09', 'Sibiu', 'Sibiu', 'Str. Victoriei 8', 'Contabil', 'Deloitte', '0741000007', 'elena.radu@email.com', '2920909123456', 'Necăsătorit', NOW()),
+(9, 'P009', 'Mihai', 'Drăgan', '1978-04-18', 'București', 'București', 'Str. Aviatorilor 25', 'Jurnalist', 'TVR', '0741000008', 'mihai.dragan@email.com', '1780418123456', 'Căsătorit', NOW()),
+(10, 'P010', 'Ana', 'Petrescu', '1984-07-23', 'Galați', 'Galați', 'Str. Brăilei 120', 'Psiholog', 'Centrul Psiho', '0741000009', 'ana.petrescu@email.com', '2840723123456', 'Necăsătorit', NOW()),
+(11, 'P011', 'George', 'Tudor', '1969-08-01', 'Argeș', 'Pitești', 'Str. Exercițiu 9', 'Economist', 'BCR', '0741000010', 'george.tudor@email.com', '1690801123456', 'Căsătorit', NOW());
 
 -- --------------------------------------------------------
 
